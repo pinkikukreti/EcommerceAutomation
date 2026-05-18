@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite" verbose="1">
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <test name="Single_Device_Test">
+
+        <parameter name="deviceName" value="pixel 5 API 31"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="systemPort" value="8201"/>
+
+        <classes>
+<!--            <class name="testCases.ViewsTest"/>-->
+                        <class name="testCases.ViewsTest"/>
+        </classes>
+
+    </test>
+
+</suite>

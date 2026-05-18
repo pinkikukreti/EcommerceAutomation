@@ -1,0 +1,9 @@
+{
+  "pname": "Android",
+  "dname": "emulator-5554",
+  "pversion": "13",
+  "apackage": "com.wdiodemoapp",
+  "activity": "com.wdiodemoapp.MainActivity",
+  "reset": false
+
+}

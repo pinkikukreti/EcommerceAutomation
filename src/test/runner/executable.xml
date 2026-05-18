@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite" parallel="tests" thread-count="2" verbose="1">
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <!-- Device 1 -->
+    <test name="Pixel_Emulator_1">
+        <parameter name="deviceName" value="pixel 6"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="systemPort" value="8201"/>
+        <classes>
+            <class name="testCases.ViewsTest"/>
+<!--            <class name="testCases.homePageTest"/>-->
+        </classes>
+    </test>
+
+    <!-- Device 2 -->
+    <test name="Pixel_Emulator_2">
+        <parameter name="deviceName" value="pixel 5 API 31"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="udid" value="emulator-5556"/>
+        <parameter name="systemPort" value="8202"/>
+
+        <classes>
+            <class name="testCases.ViewsTest"/>
+<!--            <class name="testCases.homePageTest"/>-->
+        </classes>
+    </test>
+
+</suite>
